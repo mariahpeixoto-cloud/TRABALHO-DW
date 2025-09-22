@@ -2,7 +2,7 @@ const form= document.getElementById('form');
 const username= document.getElementById('username');
 const email= document.getElementById('email');
 const password= document.getElementById('password');
-const passawoedConfimation= document.getElementById('password-confirmation');
+const passawordConfimation= document.getElementById('password-confirmation');
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -14,7 +14,7 @@ form.addEventListener('submit', (e) => {
     const usernameValue = username.value;
     const emailValue = email.value;
     const passwordValue = password.value;
-    const passawoedConfimationValue = passawoedConfimation.value;
+    const passawordConfimationValue = passawordConfimation.value;
 
    if (usernameValue === ''){
       setErrorFor(username, 'O nome de usuário é obrigatorio');
@@ -24,20 +24,23 @@ form.addEventListener('submit', (e) => {
 
    if (emailValue === ''){
     setErrorFor(email, 'O email é obrigatório');
-   } else {
+   } else if (!checkEmail(emailValue)){ setErrorFor(email, 'email inválido');}
+   else{
   setSuccessFor(email);
    }
 
    if (passwordValue === ''){
      setErrorFor(password, 'Senha obrigatória');
-   } else {
+   } else if(passwordValue.length < '8') { setErrorFor(password, 'mínimo oito carácteres') }
+   else{
      setSuccessFor(password);
    }
 
-   if (passawoedConfimationValue === ''){
-     setErrorFor(passawoedConfimation, 'Confirmação de senha obrigatórioa');
-   } else {
-     setSuccessFor(passawoedConfimation);
+   if (passawordConfimationValue === ''){
+     setErrorFor(passawordConfimation, 'Confirmação de senha obrigatórioa');
+   } else if (passawordConfimationValue !== passwordValue ){ setErrorFor (passawordConfimation, "as senhas não conferem")}
+   else{
+     setSuccessFor(passawordConfimation);
    }
  }
 
