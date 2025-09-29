@@ -10,26 +10,23 @@ const campoCPF = document.getElementById('campoCPF');
 const campoCNPJ = document.getElementById('campoCNPJ');
 
 form.addEventListener('submit', (e) => {
-  e.preventDefault();
-
-  
   tipoPessoa.addEventListener('change', () => {
-    const tipo = tipoPessoa.value;
-    if (tipo === 'pf') {
-      campoCPF.style.display = 'block';
-      campoCNPJ.style.display = 'none';
-      clearField(PessoaJuridica);
-    } else if (tipo === 'pj') {
-      campoCNPJ.style.display = 'block';
-      campoCPF.style.display = 'none';
-      clearField(PessoaFisica);
-    } else {
-      campoCPF.style.display = 'none';
-      campoCNPJ.style.display = 'none';
-      clearField(PessoaFisica);
-      clearField(PessoaJuridica);
-    }
-  });
+  const tipo = tipoPessoa.value;
+  if (tipo === 'pf') {
+    campoCPF.style.display = 'block';
+    campoCNPJ.style.display = 'none';
+    clearField(PessoaJuridica);
+  } else if (tipo === 'pj') {
+    campoCNPJ.style.display = 'block';
+    campoCPF.style.display = 'none';
+    clearField(PessoaFisica);
+  } else {
+    campoCPF.style.display = 'none';
+    campoCNPJ.style.display = 'none';
+    clearField(PessoaFisica);
+    clearField(PessoaJuridica);
+  }
+});
   checkImput();
 })
 
