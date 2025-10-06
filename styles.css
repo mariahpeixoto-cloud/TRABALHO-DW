@@ -88,13 +88,40 @@ label {
   padding: 10px;
 
 }
-#PessoaFisica, #PessoaJuridica{
-display: none;
 
-}
+ 
 .mostrar {
+
   display: none;
-}
+  
+  }
+  
+  
+  
+  .pessoa {
+  
+  font-size: 15PX;
+  
+  padding: 2px 5px;
+  
+  background-color: #fff;
+  
+  border-radius: 10px;
+  
+  width: 100%;
+  
+  max-width: 100%;
+  
+  overflow: hidden;
+  
+  height: 40px;
+  
+  display: flex;
+  
+  border-color: #f0f0f0;}
+
+
+
 select {
   font-size: 15PX;
   padding: 2px 5px;
@@ -106,20 +133,6 @@ select {
   height: 40px;
   display: flex;
   border-color: #f0f0f0;
-}
-.pessoa {
-  font-size: 15PX;
-  padding: 2px 5px;
-  background-color: #fff;
-  border-radius: 10px;
-  width: 100%;
-  max-width: 100%;
-  overflow: hidden;
-  height: 40px;
-  display: flex;
-  border-color: #f0f0f0;
-
-
 }
 
 
