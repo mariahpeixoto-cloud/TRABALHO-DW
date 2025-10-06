@@ -89,7 +89,7 @@ setSuccessFor(passwordConfirmation);
 if (tipoPessoaValue === 'pf') {
 if (PessoaFisicaValue === '') {
 setErrorFor(PessoaFisica, 'CPF obrigatório');
-} else if (!/^\d{11}$/.test(PessoaFisicaValue)) {
+} else if (PessoaFisicaValue.length !== 11) {
 setErrorFor(PessoaFisica, 'CPF deve conter exatamente 11 dígitos numéricos');
 } else {
 setSuccessFor(PessoaFisica);
@@ -97,7 +97,7 @@ setSuccessFor(PessoaFisica);
 } else if (tipoPessoaValue === 'pj') {
 if (PessoaJuridicaValue === '') {
 setErrorFor(PessoaJuridica, 'CNPJ obrigatório');
-} else if (!/^\d{14}$/.test(PessoaJuridicaValue)) {
+} else if (PessoaJuridicaValue.length !== 14 ) {
 setErrorFor(PessoaJuridica, 'CNPJ deve conter exatamente 14 dígitos numéricos');
 } else {
 setSuccessFor(PessoaJuridica);
