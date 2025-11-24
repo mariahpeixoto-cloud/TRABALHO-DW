@@ -177,5 +177,37 @@ background: #ffcdd2;
 
 }
 
+.icon-button.danger svg{
+    fill: #c62828;
+  }
+
+  .icon-button.danger:hover{
+    background: #ffcdd2;
+  }
+
+  tbody tr:nth-child(even){
+    background: #f5f9ff;
+  }
+  tbody tr:nth-child(odd){
+   background: #f5f5f5;
+  }
+  tbody  tr:hover {
+    background: #e3f2fd;
+  }
+  @media (max-width:680px ){
+    .page-header{
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .actions {
+      width: 100%;
+      flex-direction: column;
+    }
+    .actions .button {
+     width: 100%;
+     text-align: center;
+    }
+    
+  }
 
 
